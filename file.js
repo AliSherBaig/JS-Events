@@ -40,7 +40,7 @@ function rendertasks() {
         ul.append(li)
     });
     if(tasks.length ==0){
-        document.write("Task list is empty");
+        alert("Task list is empty");
     }
     document.body.querySelector(".user-input").append(ul)
 }
