@@ -39,6 +39,9 @@ function rendertasks() {
         li.append(closeButton)
         ul.append(li)
     });
+    if(tasks.length ==0){
+        document.write("Task list is empty");
+    }
     document.body.querySelector(".user-input").append(ul)
 }
 const input = document.createElement('input');
@@ -46,7 +49,7 @@ input.style.marginRight = "10px"
 const inputButton = document.createElement('button');
 inputButton.innerHTML = "ADD"
 
-input.placeholder = "Add new list item ";
+input.placeholder = "Add new task to list";
 input.style.padding = "10px 20px"
 inputButton.style.padding = "10px 20px"
 document.body.querySelector(".to-do-list").append(input)
@@ -59,4 +62,3 @@ inputButton.onclick = function () {
     rendertasks()
 }
 rendertasks()
-
